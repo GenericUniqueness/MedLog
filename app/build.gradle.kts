@@ -80,9 +80,6 @@ dependencies {
     implementation("com.itextpdf:itext7-core:7.2.5")
     implementation("com.itextpdf:layout:7.2.5")
 
-    // Data validation
-    implementation("com.github.michael-rapp:android-util:2.4.0")
-
     // Coil for image loading (file attachments)
     implementation("io.coil-kt:coil-compose:2.7.0")
 
