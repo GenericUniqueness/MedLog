@@ -106,7 +106,7 @@ class MedicationCheckWorker(
                     try {
                         val parts = timeStr.trim().split(":")
                         LocalTime.of(parts[0].toInt(), parts[1].toInt())
-                    } catch (e: Exception) null
+                    } catch (e: Exception) { null }
                 }
             }
             else -> emptyList()
