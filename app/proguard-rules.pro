@@ -115,3 +115,8 @@
     public static *** v(...);
     public static *** i(...);
 }
+
+# ── SLF4J ────────────────────────────────────────────────────────────
+# iText pulls in SLF4J API but the impl is not present at runtime
+-dontwarn org.slf4j.impl.**
+-dontwarn org.slf4j.**
