@@ -20,12 +20,18 @@ class ProfileViewModel(private val repository: ProfileRepository) : ViewModel() 
     private val _activeProfile = MutableStateFlow<ProfileEntity?>(null)
     val activeProfile: StateFlow<ProfileEntity?> = _activeProfile.asStateFlow()
 
+    private val _count = MutableStateFlow(0)
+    val count: StateFlow<Int> = _count.asStateFlow()
+
     init {
         viewModelScope.launch {
             repository.getAll().collect { _profiles.value = it }
         }
         viewModelScope.launch {
             repository.getActive().collect { _activeProfile.value = it }
+        }
+        viewModelScope.launch {
+            repository.count().collect { _count.value = it }
         }
     }
 

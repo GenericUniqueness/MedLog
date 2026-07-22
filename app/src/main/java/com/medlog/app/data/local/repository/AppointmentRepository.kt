@@ -10,6 +10,9 @@ class AppointmentRepository(private val appointmentDao: AppointmentDao) {
     fun getAll(profileId: Long): Flow<List<AppointmentEntity>> =
         appointmentDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<AppointmentEntity>> =
+        appointmentDao.getByProfile(profileId)
+
     fun getById(id: Long): Flow<AppointmentEntity?> =
         appointmentDao.getById(id)
 
@@ -29,6 +32,8 @@ class AppointmentRepository(private val appointmentDao: AppointmentDao) {
     }
 
     suspend fun delete(id: Long) = appointmentDao.deleteById(id)
+
+    suspend fun deleteById(id: Long) = appointmentDao.deleteById(id)
 
     fun searchByTitle(profileId: Long, query: String): Flow<List<AppointmentEntity>> =
         appointmentDao.searchByTitle(profileId, query)

@@ -6,13 +6,13 @@ import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Appointment
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Folder
@@ -67,7 +67,7 @@ private val bottomNavDestinations = listOf(
     BottomNavDestination(Screen.Dashboard, "Home", Icons.Default.Home),
     BottomNavDestination(Screen.Medications, "Meds", Icons.Default.Medication),
     BottomNavDestination(Screen.Conditions, "Conditions", Icons.Outlined.EditCalendar),
-    BottomNavDestination(Screen.Appointments, "Appts", Icons.Default.Appointment),
+    BottomNavDestination(Screen.Appointments, "Appts", Icons.Outlined.EditCalendar),
     BottomNavDestination(Screen.Journal, "Journal", Icons.Default.MenuBook),
 )
 

@@ -94,11 +94,11 @@ fun JournalFormScreen(
     }
 
     val moodOptions = listOf(
-        "great" to "\uD83D\uDE00" to Color(0xFF2E7D32),
-        "good" to "\uD83D\uDE42" to Color(0xFF66BB6A),
-        "okay" to "\uD83D\uDE10" to Color(0xFFF9A825),
-        "bad" to "\uD83D\uDE1F" to Color(0xFFEF6C00),
-        "terrible" to "\uD83D\uDE22" to Color(0xFFC62828)
+        "great" to ("\uD83D\uDE00" to Color(0xFF2E7D32)),
+        "good" to ("\uD83D\uDE42" to Color(0xFF66BB6A)),
+        "okay" to ("\uD83D\uDE10" to Color(0xFFF9A825)),
+        "bad" to ("\uD83D\uDE1F" to Color(0xFFEF6C00)),
+        "terrible" to ("\uD83D\uDE22" to Color(0xFFC62828))
     )
 
     Scaffold(

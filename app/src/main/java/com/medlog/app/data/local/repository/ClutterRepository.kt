@@ -10,6 +10,9 @@ class ClutterRepository(private val clutterDao: ClutterDao) {
     fun getAll(profileId: Long): Flow<List<ClutterItemEntity>> =
         clutterDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<ClutterItemEntity>> =
+        clutterDao.getByProfile(profileId)
+
     fun getPinned(profileId: Long): Flow<List<ClutterItemEntity>> =
         clutterDao.getPinned(profileId)
 

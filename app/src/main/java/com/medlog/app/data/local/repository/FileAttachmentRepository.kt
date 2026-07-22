@@ -10,6 +10,9 @@ class FileAttachmentRepository(private val fileAttachmentDao: FileAttachmentDao)
     fun getAll(profileId: Long): Flow<List<FileAttachmentEntity>> =
         fileAttachmentDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<FileAttachmentEntity>> =
+        fileAttachmentDao.getByProfile(profileId)
+
     fun getById(id: Long): Flow<FileAttachmentEntity?> =
         fileAttachmentDao.getById(id)
 

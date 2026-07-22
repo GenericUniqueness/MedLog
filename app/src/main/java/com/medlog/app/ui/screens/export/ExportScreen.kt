@@ -530,7 +530,7 @@ private suspend fun generatePdf(
                             .setFontSize(10f)
                             .setMarginTop(8f)
                             .setMarginBottom(2f)
-                            .setLeftIndent(12f)
+                            .setMarginLeft(12f)
                     )
                 }
                 line.startsWith("  ") && !line.startsWith("    ") && !line.startsWith("      ") -> {
@@ -556,7 +556,7 @@ private suspend fun generatePdf(
                                 .setFontSize(11f)
                                 .setMarginTop(6f)
                                 .setMarginBottom(1f)
-                                .setLeftIndent(12f)
+                                .setMarginLeft(12f)
                         )
                     } else {
                         document.add(
@@ -565,7 +565,7 @@ private suspend fun generatePdf(
                                 .setFontSize(10f)
                                 .setMarginTop(1f)
                                 .setMarginBottom(1f)
-                                .setLeftIndent(12f)
+                                .setMarginLeft(12f)
                         )
                     }
                 }

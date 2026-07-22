@@ -17,6 +17,9 @@ class ConditionRepository(
     fun getAll(profileId: Long): Flow<List<ConditionEntity>> =
         conditionDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<ConditionEntity>> =
+        conditionDao.getByProfile(profileId)
+
     fun getById(id: Long): Flow<ConditionEntity?> =
         conditionDao.getById(id)
 
@@ -33,6 +36,8 @@ class ConditionRepository(
     }
 
     suspend fun delete(id: Long) = conditionDao.deleteById(id)
+
+    suspend fun deleteById(id: Long) = conditionDao.deleteById(id)
 
     // ── Condition Notes ──────────────────────────────────────────────
 

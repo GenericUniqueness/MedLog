@@ -34,6 +34,8 @@ class SectionRepository(
 
     suspend fun delete(id: Long) = sectionDao.deleteById(id)
 
+    suspend fun deleteById(id: Long) = sectionDao.deleteById(id)
+
     // ── Section Entries ──────────────────────────────────────────────
 
     fun getEntries(sectionId: Long): Flow<List<SectionEntryEntity>> =

@@ -179,7 +179,7 @@ class MedicationViewModel(
             val activeMedications = medicationRepository.getActiveByProfile(profileId)
             val weekLogs = medicationLogRepository.getAdherenceLast7Days(profileId, weekAgo)
 
-            combine(activeMedications, weekLogs) { medications, logs ->
+            combine(activeMedications, weekLogs) { medications: List<MedicationEntity>, logs: List<MedicationLogEntity> ->
                 var expectedTotal = 0
                 var takenTotal = 0
 
@@ -188,12 +188,12 @@ class MedicationViewModel(
                         "once-daily" -> 1
                         "twice-daily" -> 2
                         "three-daily" -> 3
-                        "weekly" -> 1.0 / 7.0
-                        "as-needed" -> continue  // skip as-needed from adherence calc
-                        "custom" -> 1 // default assumption for custom
+                        "weekly" -> 1
+                        "as-needed" -> continue
+                        "custom" -> 1
                         else -> 1
                     }
-                    expectedTotal += (dailyDoses * 7).toInt()
+                    expectedTotal += dailyDoses * 7
                 }
 
                 for (log in logs) {
@@ -205,7 +205,7 @@ class MedicationViewModel(
                 if (expectedTotal > 0) {
                     (takenTotal * 100) / expectedTotal
                 } else {
-                    100 // no expected doses means 100% adherence
+                    100
                 }
             }.collect { adherenceFlow.value = it }
         }

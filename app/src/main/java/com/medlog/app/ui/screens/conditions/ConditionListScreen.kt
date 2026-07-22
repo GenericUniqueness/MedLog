@@ -48,7 +48,7 @@ fun ConditionListScreen(navController: NavController) {
     val context = LocalContext.current
     val app = context.applicationContext as MedLogApplication
     val profileRepository = app.profileRepository
-    val activeProfile by profileRepository.getActive().collectAsState(initial = null)
+    val activeProfile by profileRepository.getActive().collectAsStateWithLifecycle(initialValue = null)
 
     val viewModel = remember {
         ConditionViewModel(app.conditionRepository, app.conditionNoteRepository)

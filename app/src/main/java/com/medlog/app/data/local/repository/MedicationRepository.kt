@@ -20,7 +20,13 @@ class MedicationRepository(
     fun getAll(profileId: Long): Flow<List<MedicationEntity>> =
         medicationDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<MedicationEntity>> =
+        medicationDao.getByProfile(profileId)
+
     fun getActive(profileId: Long): Flow<List<MedicationEntity>> =
+        medicationDao.getActiveByProfile(profileId)
+
+    fun getActiveByProfile(profileId: Long): Flow<List<MedicationEntity>> =
         medicationDao.getActiveByProfile(profileId)
 
     fun getById(id: Long): Flow<MedicationEntity?> =
@@ -36,6 +42,8 @@ class MedicationRepository(
     }
 
     suspend fun delete(id: Long) = medicationDao.deleteById(id)
+
+    suspend fun deleteById(id: Long) = medicationDao.deleteById(id)
 
     fun searchByName(profileId: Long, query: String): Flow<List<MedicationEntity>> =
         medicationDao.searchByName(profileId, query)

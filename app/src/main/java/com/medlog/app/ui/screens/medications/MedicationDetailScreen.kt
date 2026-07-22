@@ -268,7 +268,7 @@ fun MedicationDetailScreen(
             title = { Text(stringResource(R.string.confirm_delete_title), fontSize = 16.sp) },
             text = {
                 Text(
-                    text = stringResource(R.string.confirm_delete_message, med.name),
+                    text = stringResource(R.string.confirm_delete_message, medication!!.name),
                     fontSize = 14.sp
                 )
             },

@@ -291,7 +291,7 @@ fun ConditionDetailScreen(
             title = { Text(stringResource(R.string.confirm_delete_title), fontSize = 16.sp) },
             text = {
                 Text(
-                    text = stringResource(R.string.confirm_delete_message, cond.name),
+                    text = stringResource(R.string.confirm_delete_message, condition!!.name),
                     fontSize = 14.sp
                 )
             },

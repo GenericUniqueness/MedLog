@@ -19,6 +19,7 @@ import com.medlog.app.ui.screens.clutter.ClutterScreen
 import com.medlog.app.ui.screens.conditions.ConditionDetailScreen
 import com.medlog.app.ui.screens.conditions.ConditionFormScreen
 import com.medlog.app.ui.screens.conditions.ConditionListScreen
+import com.medlog.app.ui.screens.conditions.ConditionNoteFormScreen
 import com.medlog.app.ui.screens.dashboard.DashboardScreen
 import com.medlog.app.ui.screens.files.FileListScreen
 import com.medlog.app.ui.screens.journal.JournalFormScreen
@@ -99,10 +100,16 @@ fun MedLogNavGraph(
             SectionListScreen(navController = navController)
         }
         composable(Screen.Clutter.route) {
-            ClutterScreen(navController = navController)
+            ClutterScreen(
+                navController = navController,
+                activeProfile = activeProfile
+            )
         }
         composable(Screen.Settings.route) {
-            SettingsScreen(navController = navController)
+            SettingsScreen(
+                navController = navController,
+                activeProfile = activeProfile
+            )
         }
 
         // ── Medication detail/form screens ───────────────────────
@@ -280,11 +287,14 @@ fun MedLogNavGraph(
 
         // ── Search & Export ──────────────────────────────────────
         composable(Screen.Search.route) {
-            SearchScreen(navController = navController)
+            SearchScreen(
+                navController = navController,
+                profileId = activeProfile?.id ?: 0L
+            )
         }
         composable(Screen.Export.route) {
             ExportScreen(
-                navController = navController,
+                onBack = { navController.popBackStack() },
                 activeProfile = activeProfile
             )
         }

@@ -10,6 +10,9 @@ class JournalRepository(private val journalDao: JournalDao) {
     fun getAll(profileId: Long): Flow<List<JournalEntryEntity>> =
         journalDao.getByProfile(profileId)
 
+    fun getByProfile(profileId: Long): Flow<List<JournalEntryEntity>> =
+        journalDao.getByProfile(profileId)
+
     fun getById(id: Long): Flow<JournalEntryEntity?> =
         journalDao.getById(id)
 
