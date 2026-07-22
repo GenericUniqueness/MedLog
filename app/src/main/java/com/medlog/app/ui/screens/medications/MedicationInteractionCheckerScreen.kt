@@ -193,10 +193,11 @@ fun MedicationInteractionCheckerScreen(
                     }
                 }
 
-                if (hasChecked) {
+                    if (hasChecked) {
                     item {
                         Spacer(modifier = Modifier.height(8.dp))
-                        if (results.isNullOrEmpty()) {
+                        val currentResults = results
+                        if (currentResults.isNullOrEmpty()) {
                             Card(
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = CardDefaults.cardColors(
@@ -226,7 +227,7 @@ fun MedicationInteractionCheckerScreen(
                             }
                         } else {
                             Text(
-                                text = "Found ${results.size} potential interaction${if (results.size > 1) "s" else ""}",
+                                text = "Found ${currentResults.size} potential interaction${if (currentResults.size > 1) "s" else ""}",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.SemiBold,
                                 fontSize = 16.sp
@@ -236,7 +237,7 @@ fun MedicationInteractionCheckerScreen(
                     }
 
                     if (results != null) {
-                        items(results, key = { "${it.drug1}-${it.drug2}" }) { interaction ->
+                        items(results.orEmpty(), key = { "${it.drug1}-${it.drug2}" }) { interaction ->
                             InteractionCard(interaction = interaction)
                         }
                     }

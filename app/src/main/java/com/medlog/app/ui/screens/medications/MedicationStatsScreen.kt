@@ -512,14 +512,14 @@ private fun calculateOverallAdherence(
 ): Int {
     var expectedTotal = 0
     for (med in medications) {
-        val dailyDoses = when (med.frequency) {
-            "once-daily" -> 1
-            "twice-daily" -> 2
-            "three-daily" -> 3
+        val dailyDoses: Double = when (med.frequency) {
+            "once-daily" -> 1.0
+            "twice-daily" -> 2.0
+            "three-daily" -> 3.0
             "weekly" -> 1.0 / 7.0
             "as-needed" -> continue
-            "custom" -> 1
-            else -> 1
+            "custom" -> 1.0
+            else -> 1.0
         }
         expectedTotal += (dailyDoses * days).toInt()
     }
@@ -539,14 +539,14 @@ private fun calculatePerMedicationAdherence(
     days: Int
 ): List<Pair<MedicationEntity, Int>> {
     return medications.map { med ->
-        val dailyDoses = when (med.frequency) {
-            "once-daily" -> 1
-            "twice-daily" -> 2
-            "three-daily" -> 3
+        val dailyDoses: Double = when (med.frequency) {
+            "once-daily" -> 1.0
+            "twice-daily" -> 2.0
+            "three-daily" -> 3.0
             "weekly" -> 1.0 / 7.0
             "as-needed" -> return@map med to 0
-            "custom" -> 1
-            else -> 1
+            "custom" -> 1.0
+            else -> 1.0
         }
         val expected = (dailyDoses * days).toInt()
         val medLogs = logs.filter { it.medicationId == med.id }

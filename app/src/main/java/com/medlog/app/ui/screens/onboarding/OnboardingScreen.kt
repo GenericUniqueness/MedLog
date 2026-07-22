@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.medlog.app.R
 import com.medlog.app.util.GenderLabels
+import com.medlog.app.MedLogApplication
 import com.medlog.app.viewmodel.ProfileViewModel
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -48,10 +49,11 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OnboardingScreen(
-    profileViewModel: ProfileViewModel,
     onProfileCreated: () -> Unit
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as MedLogApplication
+    val profileViewModel = remember { ProfileViewModel(app.profileRepository) }
     val scope = rememberCoroutineScope()
 
     var name by remember { mutableStateOf("") }

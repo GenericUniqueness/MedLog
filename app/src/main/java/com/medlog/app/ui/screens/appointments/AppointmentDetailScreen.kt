@@ -468,7 +468,7 @@ private fun IconDetailRow(
         verticalAlignment = Alignment.Top
     ) {
         Icon(
-            icon = icon,
+            imageVector = icon,
             contentDescription = null,
             modifier = Modifier
                 .width(100.dp)

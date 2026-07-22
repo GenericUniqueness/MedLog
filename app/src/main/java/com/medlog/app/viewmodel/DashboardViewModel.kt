@@ -115,14 +115,14 @@ class DashboardViewModel(
                     var takenTotal = 0
 
                     for (med in medications) {
-                        val dailyDoses = when (med.frequency) {
-                            "once-daily" -> 1
-                            "twice-daily" -> 2
-                            "three-daily" -> 3
+                        val dailyDoses: Double = when (med.frequency) {
+                            "once-daily" -> 1.0
+                            "twice-daily" -> 2.0
+                            "three-daily" -> 3.0
                             "weekly" -> 1.0 / 7.0
                             "as-needed" -> continue // skip as-needed from adherence
-                            "custom" -> 1
-                            else -> 1
+                            "custom" -> 1.0
+                            else -> 1.0
                         }
                         expectedTotal += (dailyDoses * 7).toInt()
                     }

@@ -91,13 +91,13 @@ fun MedLogNavGraph(
             AppointmentListScreen(navController = navController)
         }
         composable(Screen.Journal.route) {
-            JournalListScreen(navController = navController)
+            JournalListScreen(navController = navController, activeProfile = activeProfile)
         }
         composable(Screen.Files.route) {
-            FileListScreen(navController = navController)
+            FileListScreen(navController = navController, activeProfile = activeProfile)
         }
         composable(Screen.Sections.route) {
-            SectionListScreen(navController = navController)
+            SectionListScreen(navController = navController, activeProfile = activeProfile)
         }
         composable(Screen.Clutter.route) {
             ClutterScreen(
