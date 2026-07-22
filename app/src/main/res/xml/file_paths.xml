@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Internal storage for exported PDFs -->
+    <files-path name="exports" path="exports/" />
+    <!-- Internal storage for attachment files -->
+    <files-path name="attachments" path="attachments/" />
+    <!-- Cache for camera captures -->
+    <cache-path name="cache" path="." />
+</paths>

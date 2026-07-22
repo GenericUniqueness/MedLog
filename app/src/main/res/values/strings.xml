@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MedLog</string>
+    <string name="no_profiles_title">Welcome to MedLog</string>
+    <string name="no_profiles_message">Create a profile to start tracking your health. Each profile keeps its data separate — perfect for family members.</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="delete_profile">Delete Profile</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_date_of_birth">Date of Birth</string>
+    <string name="profile_gender">Gender</string>
+    <string name="profile_blood_type">Blood Type</string>
+    <string name="profile_allergies">Allergies</string>
+    <string name="profile_emergency_contact">Emergency Contact</string>
+    <string name="profile_notes">Notes</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="medications">Medications</string>
+    <string name="conditions">Conditions</string>
+    <string name="appointments">Appointments</string>
+    <string name="journal">Journal</string>
+    <string name="files">Files</string>
+    <string name="sections">Sections</string>
+    <string name="clutter">Scratch Pad</string>
+
+    <!-- Medications -->
+    <string name="medication_name">Medication Name</string>
+    <string name="dosage">Dosage</string>
+    <string name="frequency">Frequency</string>
+    <string name="route">Route</string>
+    <string name="prescriber">Prescriber</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date (optional)</string>
+    <string name="log_medication">Log Medication</string>
+    <string name="medication_history">History</string>
+    <string name="no_medications">No medications tracked yet</string>
+    <string name="no_medications_hint">Tap the + button to add your first medication.</string>
+    <string name="medication_logged">Medication logged</string>
+    <string name="medication_skipped">Medication skipped</string>
+    <string name="adherence_7day">7-Day Adherence</string>
+
+    <!-- Conditions -->
+    <string name="condition_name">Condition Name</string>
+    <string name="severity">Severity</string>
+    <string name="status">Status</string>
+    <string name="diagnosed_at">Diagnosed Date</string>
+    <string name="diagnosing_doctor">Diagnosing Doctor</string>
+    <string name="no_conditions">No conditions recorded</string>
+    <string name="no_conditions_hint">Tap + to add a health condition to track.</string>
+    <string name="add_note">Add Note</string>
+    <string name="no_notes">No notes for this condition yet</string>
+
+    <!-- Appointments -->
+    <string name="appointment_title">Title</string>
+    <string name="doctor">Doctor</string>
+    <string name="location">Location</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="duration">Duration (minutes)</string>
+    <string name="appointment_type">Type</string>
+    <string name="no_appointments">No appointments scheduled</string>
+    <string name="no_appointments_hint">Tap + to schedule your first appointment.</string>
+    <string name="set_reminder">Set Reminder</string>
+
+    <!-- Journal -->
+    <string name="journal_title">Title (optional)</string>
+    <string name="journal_content">How are you feeling today?</string>
+    <string name="mood">Mood</string>
+    <string name="tags">Tags (comma-separated)</string>
+    <string name="no_journal_entries">No journal entries yet</string>
+    <string name="no_journal_hint">Start writing about your health journey.</string>
+
+    <!-- Files -->
+    <string name="upload_file">Upload File</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="file_category">Category</string>
+    <string name="no_files">No files uploaded</string>
+    <string name="no_files_hint">Upload lab results, prescriptions, or other medical documents.</string>
+
+    <!-- Sections -->
+    <string name="section_title">Section Title</string>
+    <string name="no_sections">No custom sections</string>
+    <string name="no_sections_hint">Create sections to organize your medical information like a binder.</string>
+
+    <!-- Clutter -->
+    <string name="clutter_hint">Quick notes, reminders, anything you want to jot down.</string>
+    <string name="no_clutter">Scratch pad is empty</string>
+
+    <!-- General -->
+    <string name="confirm_delete_title">Confirm Delete</string>
+    <string name="confirm_delete_message">Are you sure you want to delete \"%1$s\"? This cannot be undone.</string>
+    <string name="confirm_delete_profile_message">Are you sure you want to delete the profile \"%1$s\"? All associated data will be permanently deleted.</string>
+    <string name="field_required">%1$s is required</string>
+    <string name="export_pdf">Export to PDF</string>
+    <string name="exporting">Exporting…</string>
+    <string name="export_complete">Export complete</string>
+    <string name="export_failed">Export failed</string>
+    <string name="notification_medication">Medication Reminder</string>
+    <string name="notification_appointment">Upcoming Appointment</string>
+    <string name="notification_medication_text">Time to take %1$s (%2$s)</string>
+    <string name="notification_appointment_text">%1$s with %2$s at %3$s</string>
+    <string name="today">Today</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="past">Past</string>
+    <string name="all">All</string>
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="missed">Missed</string>
+    <string name="taken">Taken</string>
+    <string name="skipped">Skipped</string>
+    <string name="late">Late</string>
+    <string name="onboarding_title">Welcome to MedLog</string>
+    <string name="onboarding_subtitle">Your personal health companion. Track medications, conditions, appointments, and more — all offline, all private.</string>
+    <string name="onboarding_create_profile">Create Your First Profile</string>
+    <string name="switch_profile">Switch Profile</string>
+    <string name="profile_deleted">Profile deleted</string>
+    <string name="saved">Saved</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_empty_field">This field cannot be empty</string>
+    <string name="no_results">No results found</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="data_management">Data Management</string>
+    <string name="clear_all_data">Clear All Data</string>
+    <string name="clear_data_confirmation">This will permanently delete ALL profiles and their data. Are you sure?</string>
+</resources>
